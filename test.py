@@ -23,7 +23,7 @@ with open('/Users/bloom/Desktop/steel/BitDates.csv', 'r+') as f:
     for key, value in a.items():
         dates.writerow([key, value])
 
-###TODO   PUT dict response into an excel file ###
+
 #
 # 2018-01-01
 # 2018-02-02

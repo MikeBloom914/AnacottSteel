@@ -32,15 +32,15 @@ def homepage():
         return render_template('homepage.html')
 
 
-@app.route('/dates', methods=['GET', 'POST'])
-def dates():
-    if request.method == 'GET':
-        return render_template('buy.html')
-    else:
-        start_date = request.form['start']
-        end_date = request.form['end']
-        x = model.buy(ticker_symbol, trade_volume)
-        return render_template('buy.html', message=x)
+# @app.route('/dates', methods=['GET', 'POST'])
+# def dates():
+#     if request.method == 'GET':
+#         return render_template('buy.html')
+#     else:
+#         start_date = request.form['start']
+#         end_date = request.form['end']
+#         x = model.buy(ticker_symbol, trade_volume)
+#         return render_template('buy.html', message=x)
 
 
 if __name__ == '__main__':

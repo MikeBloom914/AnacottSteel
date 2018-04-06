@@ -23,7 +23,6 @@ print(response['bpi'])
 #        d.writerow(key, value)
 
 # d.close()
-###TODO   PUT dict response into an excel file ###
 #
 # 2018-01-01
 # 2018-02-02
