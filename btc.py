@@ -3,7 +3,7 @@ import json
 import requests
 import csv
 import os
-import pandas as pd
+# import pandas as pd
 
 print('Please enter dates in the format of "YYYY-MM-DD"')
 
@@ -15,10 +15,10 @@ deep_link = 'https://api.coindesk.com/v1/bpi/historical/close.json?start={start}
 response = json.loads(requests.get(deep_link).text)
 print(response['bpi'])
 
-#os.system('touch /Users/bloom/Desktop/steel/BitcoinDates.csv')
+# os.system('touch /Users/bloom/Desktop/steel/BitcoinDates.csv')
 
 # with open('/Users/bloom/Desktop/steel/BitcoinDates.csv', 'r+') as d:
-#writer = csv.writer(d)
+# writer = csv.writer(d)
 #    for key, value in dates:
 #        d.writerow(key, value)
 
