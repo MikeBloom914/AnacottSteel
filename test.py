@@ -27,6 +27,6 @@ with open('bit_dates.csv', 'r+') as f:
 
 
 # 2018-01-01
-# 2018-01-02
+# 2018-01-05
 
 print(response['bpi'])
