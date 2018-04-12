@@ -13,13 +13,13 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def login():
     if request.method == 'GET':
-        return render_template('login.html')
+        return render_template('index.html')
     else:
         email = request.form['email']
         password = request.form['password']
 
         if email != 'mikebloom914@gmail.com' or password != 'swordfish':
-            return render_template('login.html', message='BAD CREDENTIALS...Please try again')
+            return render_template('index.html', message='BAD CREDENTIALS...Please try again')
         else:
             return redirect(url_for('homepage'))
 
@@ -32,15 +32,15 @@ def homepage():
         return render_template('homepage.html')
 
 
-# @app.route('/dates', methods=['GET', 'POST'])
-# def dates():
-#     if request.method == 'GET':
-#         return render_template('buy.html')
-#     else:
-#         start_date = request.form['start']
-#         end_date = request.form['end']
-#         x = model.buy(ticker_symbol, trade_volume)
-#         return render_template('buy.html', message=x)
+@app.route('/stock', methods=['GET', 'POST'])
+def stocks():
+    if request.method == 'GET':
+        return render_template('stock.html')
+    else:
+        start_date = request.form['start']
+        end_date = request.form['end']
+        x = model.stock(stock)
+        return render_template('stock.html', message=x)
 
 
 if __name__ == '__main__':

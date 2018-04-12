@@ -22,7 +22,7 @@ end = input('Enter end date: ')
 deep_link = 'https://www.quandl.com/api/v3/datasets/WIKI/{stock}.json?start_date={start}&end_date={end}'.format(stock=stock, start=start, end=end)
 response = json.loads(requests.get(deep_link).text)
 
-print(response)
+#print(response)
 
 # x = (response['bpi'])
 

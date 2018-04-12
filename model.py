@@ -7,17 +7,22 @@ import requests
 import os
 
 
-def dates(start_date, end_date):
-
-    deep_link = 'https://api.coindesk.com/v1/bpi/historical/close.json?start={start_date} & end={end_date}'.format(start=start_date, end=end_date)
+def stock(stock):
+    deep_link = 'https://www.quandl.com/api/v3/datasets/WIKI/{stock}.json?start_date={start}&end_date={end}'.format(stock=stock, start=start, end=end)
     response = json.loads(requests.get(deep_link).text)
+    whole = (response['dataset'])
+    # may have to change WIKI to EOD
+    # https://www.quandl.com/api/v3/datasets/EOD/{stock}.json?start_date=2018-04-09&end_date=2018-04-11&api_key=ZxbbrDjmsCg4vFZC1Uu5
 
-    connection = sqlite3.connect('master.db', check_same_thread=False)
-    cursor = connection.cursor()
+    a = []
+    x = [[k, v] for k, v in whole.items()]
+    y = x[17][1]x
+    for i in y:
+        key = (i[0])
+        value = (i[4])
+        a.append((key, value))
 
-    start_date = response['start']
-    end_date = response['end']
-
-    cursor.execute('SELECT balance FROM users;')
-    balance = cursor.fetchall()[0][0]
-    unix_time = time.time()
+    sort_list = sorted(a)
+    # print(sort_list)
+    b = dict(sort_list)
+    print(b)
