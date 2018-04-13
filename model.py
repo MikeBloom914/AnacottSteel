@@ -16,7 +16,7 @@ def stock(stock):
 
     a = []
     x = [[k, v] for k, v in whole.items()]
-    y = x[17][1]x
+    y = x[17][1]
     for i in y:
         key = (i[0])
         value = (i[4])
