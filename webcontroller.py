@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 
 import time
-
 from flask import Flask, redirect, render_template, request, url_for
-
 import model
 
 
