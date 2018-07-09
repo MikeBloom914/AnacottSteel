@@ -10,7 +10,7 @@ style.use('fivethirtyeight')
 start = datetime.datetime(2010, 1, 1)
 end = datetime.datetime.now()
 
-df = web.DataReader("XOM", "morningstar", start, end)
+df = web.DataReader("UNG", "morningstar", start, end)
 
 df.reset_index(inplace=True)
 df.set_index("Date", inplace=True)
