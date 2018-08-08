@@ -1,5 +1,2 @@
-BitcoinDates.csv
-graphex.xlsx
-*.png
-Anacott_Steel.docx
 AnacottSteel/creds.py
+creds*
