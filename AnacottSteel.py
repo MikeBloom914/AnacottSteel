@@ -1,5 +1,5 @@
 #!usr/bin/env python3
-
+import creds
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
@@ -15,7 +15,7 @@ import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 
 import plotly
-plotly.tools.set_credentials_file(username='Shecky914', api_key='Pe9tUa5YA1pSIeKXEkUe')
+plotly.tools.set_credentials_file(username=creds.username, api_key=creds.api_key)
 
 
 app = dash.Dash('stock-ticker_one')
@@ -95,7 +95,7 @@ app.layout = html.Div([
     [dash.dependencies.Input('stock-ticker-input', 'value'),
      dash.dependencies.Input('stock-ticker-input-two', 'value'),
      dash.dependencies.Input('date-range', 'start_date'), dash.dependencies.Input('date-range', 'end_date')])
-def update_graph(ticker_one,ticker_two, start_date, end_date):
+def update_graph(ticker_one, ticker_two, start_date, end_date):
 
     if not ticker_one or not ticker_two:
         return []
@@ -171,7 +171,7 @@ def update_graph(ticker_one,ticker_two, start_date, end_date):
         }
 
         graphs.append(dcc.Graph(
-            id='{} vs + {}'.format(ticker_one,ticker_two),
+            id='{} vs + {}'.format(ticker_one, ticker_two),
             figure={
                 'data': [line1, line2],
                 'layout': go.Layout(
