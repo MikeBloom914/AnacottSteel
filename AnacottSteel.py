@@ -58,7 +58,7 @@ app.layout = html.Div([
                  },
                  ),
 
-        html.H4('Chose dates from the calandar to start off your chart analyzing'),
+        html.H4('Choose dates from the calandar to start off your chart analyzing'),
         html.H4('''Choose your "comparison stock"'''),
         html.H4('Then chose another stock/stocks to compare with your first pick.  The stock prices will be normalized on a 0-1 scale so the graphs will be a lot easier to analyze'),
         html.H4('*You can always hover over lines to show the actual stock prices'),
